@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
 @Entity
 @Table  
 public class Employee {
@@ -16,7 +18,7 @@ public class Employee {
 	    @Column(name = "employee_id", unique = true, nullable = false)
 	    private Long id;
 	    
-	     
+	   
 	    @Column(name="first_name")
 	    private String firstName;
 	     

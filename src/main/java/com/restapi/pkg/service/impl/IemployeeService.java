@@ -41,6 +41,27 @@ public class IemployeeService implements employeeService {
 		// TODO Auto-generated method stub
 		return employeerepository.findById(employeeid);
 	}
+
+	public List<Employee> listBynames(String firstname) {
+		// TODO Auto-generated method stub
+		return employeerepository.findByFirstName(firstname);
+	}
+
+	@Override
+	public boolean isExist(String firstname) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("data"+employeerepository.findByFirstName(firstname));
+		
+		if ( !employeerepository.findByFirstName(firstname).isEmpty()) {
+			System.out.println("-----exist");
+			return true;
+		} else {
+			System.out.println("-----Noexist");
+			return false;
+		}
+
+	}
 	
 }
 

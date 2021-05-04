@@ -13,4 +13,8 @@ public interface employeeService {
     Optional<Employee> getById(Long employeeid);
 	
 	List<Employee> list();
+	
+	List<Employee> listBynames(String firstname);
+	
+	boolean isExist(String firstname);
 }
